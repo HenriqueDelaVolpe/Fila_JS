@@ -1,0 +1,33 @@
+const alunos = [
+    "Mariana",
+    "Isa",
+    "Armando",
+    "Vitor",
+    "Haroldo",
+]
+
+export function criarFila(tamanho = 5){
+    console.log("Fila criada")
+    return [... new Array(tamanho)]
+}   
+criarFila()
+
+export function inserirNaFila(fila, item){ 
+    const posicao = fila.indexOf(undefined)
+        if (posicao === -1) { 
+            console.log("Não tem espaço")
+            return
+        }
+    fila[posicao] = item 
+    return
+}
+inserirNaFila()
+
+export function removerDaFila(fila){ 
+    if(fila[0] === undefined){
+        console.log("Fila Vazia")
+        return
+    }
+    fila.pop([0])
+}
+removerDaFila()
